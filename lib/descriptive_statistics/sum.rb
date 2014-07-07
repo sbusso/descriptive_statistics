@@ -1,5 +1,7 @@
 module DescriptiveStatistics
-  def sum 
-    return self.inject(:+)
-  end 
+  unless defined?(ActiveSupport)
+    def sum 
+      return self.inject(:+)
+    end 
+  end
 end
